@@ -25,11 +25,30 @@ function HeroSection() {
         },
         "=-0.5",
       )
-      .from(titleSplit.chars, {
-        yPercent: 200,
-        stagger: 0.02,
-        ease: "power2.out",
-      });
+      .from(
+        titleSplit.chars,
+        {
+          yPercent: 200,
+          stagger: 0.02,
+          ease: "power2.out",
+        },
+        "=-0.5",
+      );
+    const heroTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".hero-container",
+        start: "1% top",
+        end: "bottom top",
+        scrub: true,
+        market: true,
+      },
+    });
+    heroTL.to(".hero-container", {
+      rotate: 7,
+      scale: 0.9,
+      yPercent: 30,
+      ease: "power1.inOut",
+    });
   });
   return (
     <section className="bg-main-bg">

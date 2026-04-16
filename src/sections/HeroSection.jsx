@@ -40,7 +40,6 @@ function HeroSection() {
         start: "1% top",
         end: "bottom top",
         scrub: true,
-        market: true,
       },
     });
     heroTL.to(".hero-container", {

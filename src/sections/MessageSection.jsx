@@ -26,6 +26,19 @@ function MessageSection() {
         scrub: true,
       },
     });
+
+    gsap.to(secondMsgSplit.words, {
+      color: "#faeade",
+      ease: "Power1.in",
+      stagger: 1,
+      scrollTrigger: {
+        trigger: ".second-message",
+        start: "top center",
+        end: "bottom center",
+        markers: true,
+        scrub: true,
+      },
+    });
   });
   return (
     <section className="message-content">
@@ -40,7 +53,7 @@ function MessageSection() {
                 <h2 className="text-red-brown">FULE UP</h2>
               </div>
             </div>
-            <h1 className="second-message">
+            <h1 className="second-message -mt-10 md:-mt-20">
               your future with every gulp of Perfect Protein
             </h1>
           </div>
